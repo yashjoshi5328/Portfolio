@@ -1,0 +1,215 @@
+.section-project{
+    padding-top: 8vh;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.79);
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    position: relative;
+    z-index: -0;
+}
+.project-head{
+    text-align: center;
+    font-size:xx-large;
+}
+.project-container{
+    height:79vh;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden; 
+}
+.scroll-row{
+    position: relative;
+    height:50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x:scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.scroll-row::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+}
+.project-item{
+    scroll-snap-align: center;
+    position: absolute;
+    background-color: rgb(255, 190, 251);
+    width: 25%;
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color: black;  
+    padding-top:2%;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.project-item img{
+    width: 90%;
+    height:50%;
+}
+
+
+.p1{
+    left:10%;
+}
+.p2{
+    left:45%;
+}
+.p3{
+    left: 80%;
+}
+.p4{
+    left: 115%;
+}
+
+.github-icon{
+    position: absolute;
+    bottom:1%;
+    left:25%;
+    background:url('https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white');
+    width:50%;
+    min-height:10%;
+    background-position: left; /* Specify positions for each image */
+    background-repeat: no-repeat; /* Specify repeat behavior for each image */
+    background-size: 100% 100%;
+    border-radius: 8px;
+}
+
+.project-item:hover{
+    scale:1.15;
+}
+
+@media (max-width: 800px) {
+    .section-about{
+        flex-direction: column;
+        justify-content:space-around;
+    }
+    #About{
+        max-width: 100%;
+        padding:2%;
+        margin-left: 0%;
+    }
+    #intro,
+    #salutation,
+    #profession{
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+    #intro:hover,
+    #salutation:hover,
+    #profession:hover{
+        /* transform: rotateX(20deg) rotateY(20deg); */
+        transform: translateY(-10px) translateZ(60px);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+    .box{
+        min-height:6vh;
+        width:21%;
+    }
+
+}
+@media (max-width: 600px){
+    .box{
+        min-height:5vh;
+        width:32%;
+    }
+}
+@media (min-width:800px){
+    #intro-content{
+        animation: appear 3s forwards;
+    }
+    @keyframes appear {
+        0%{
+            opacity:0;
+        }
+        100%{
+            opacity: 100%;
+        }
+    }
+    #intro-content{
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform-style: preserve-3d;
+        perspective: 1000px;    
+    }
+    #intro-content:hover{
+        transform: rotateY(15deg) rotateX(5deg);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    #intro-content p{
+        padding: 20px;
+        transform: translateZ(0);
+        transition: transform 0.3s ease;
+    }
+    #intro-line{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        min-height:60vh;
+        min-width: 4%;
+    }
+    #line{
+        background: linear-gradient(to bottom, #e66465, #9198e5);
+        min-height:90%;
+        min-width: 2px;
+        box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.5);
+        transition: height 0.3s ease;
+        
+    }
+    #intro-content:hover p{
+        transform: translateY(15deg) translateZ(40px);
+    }
+    #intro-content:hover #intro:hover,
+    #intro-content:hover #salutation:hover,
+    #intro-content:hover #profession:hover
+    {
+        /* transform: rotateX(20deg) rotateY(20deg); */
+        transform: translateX(10px) translateY(-10px) translateZ(60px);
+        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+    .box{
+        min-height:7vh;
+        width:13%;
+    }
+}
+
+@media (min-width:1000px){
+    .project-item{
+        height:290px;
+        width:247px;
+    }
+    .p1{
+        left:5%;
+    }
+    .p2{
+        left:40%;
+    }
+    .p3{
+        left: 75%;
+    }
+    .p4{
+        left: 110%;
+    }
+}
+@media (max-width:450px){
+    .project-item{
+        height:40vh;
+        width:50vw;
+    }
+    .p2{
+        left:70%;
+    }
+    .p3{
+        left: 130%;
+    }
+    .p4{
+        left:190%;
+    }
+}

@@ -1,0 +1,152 @@
+.section-skill{
+    padding-top: 8vh;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.79);
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    position: relative;
+    z-index: -0;
+}
+.skill-head{
+    text-align: center;
+    font-size:xx-large;
+}
+.font-gradient{
+    background: linear-gradient(to bottom right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.skill-container{
+    padding-left: 2vw;
+}
+.flex{
+    flex-wrap: wrap;
+    display:flex;
+    justify-content: center;
+    gap:5%;
+}
+.box{
+    position: relative;
+    min-height:7vh;
+    display: flex;
+    margin: 1%;
+    width:15%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.language-container .b1{
+    background: url('https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white');
+    background-position: left; /* Specify positions for each image */
+    background-repeat: no-repeat; /* Specify repeat behavior for each image */
+    background-size: 100% 100%;
+}
+.language-container .b2{
+    background:  url('https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.language-container .b3{
+    background:  url('https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.language-container .b4{
+    background:  url('https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.language-container .b5{
+    background:  url('https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.language-container .b6{
+    background:  url('https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.language-container .b7{
+    background:  url('https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.frame-lib-container .b1{
+    background:  url('https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.frame-lib-container .b2{
+    background:  url('https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.frame-lib-container .b3{
+    background:  url('https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.frame-lib-container .b4{
+    background:  url('https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.database-container .b1{
+    background:  url('https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.database-container .b2{
+    background:  url('https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.development-tool-container .b1{
+    background:  url('https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.development-tool-container .b2{
+    background:  url('https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white') ;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.box::after{
+    position:absolute;
+    content:'99%';
+    font-weight: 500;
+    background:linear-gradient(to right, rgb(173, 255, 47,0),rgb(173, 255, 47,1));
+    width:98%;
+    height:95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    left:0;
+    top:0;
+    z-index: -1;
+}
+.box:hover{
+    background:transparent;
+    box-shadow: 40px 0 80px #22f67ac5,
+                -40px 0 80px #19f47fcc;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
