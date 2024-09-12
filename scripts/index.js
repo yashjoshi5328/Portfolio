@@ -1,3 +1,4 @@
+
 var element = document.getElementById('my-image-container');
 element.classList.add('expand');
 const menu = document.getElementById('menu');
@@ -57,3 +58,12 @@ animateWords(words);
 setTimeout(()=>{
     element.classList.remove('expand');
 },2000);
+
+window.onload = function() {
+    const loader = document.querySelector(".loader-container");
+    loader.style.transition = "opacity 2s ease ";  // Smooth fade out
+    loader.style.opacity = 0;
+    setTimeout(function() {
+        loader.style.display = "none";  // Hide the element after fading
+    }, 500);  // Matches the transition duration
+};
